@@ -9,11 +9,11 @@ module.exports = {
 function getConnection(address, callback){
 	var connection = MongoClient.connect(
 		address,
-		function(err, db){
+		function(err){
 			if(err){
 				callback(err);
 			}else{
-				callback(null, db);
+				callback(null);
 			}
 		}
 	);

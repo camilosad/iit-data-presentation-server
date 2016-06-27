@@ -2,7 +2,7 @@ var database = require('./database');
 
 module.exports = function(app){
 	app.get('/', function(req, res){
-		database.getConnection(app.address, function(err, db){
+		database.getConnection(app.get('address'), function(err, db){
 			if(err){
 				throw err;
 			}else{

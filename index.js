@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
-var port = 8081;
-var address = process.env.MONGODB_URI;
+app.set('port', (process.env.PORT || 8081));
+app.set('address', (process.env.MONGODB_URI || '127.0.0.1'));
 
-app.address = address;
-app.listen(port, address);
+app.listen(app.get('port'));
 
 require('./routes')(app);
 
-console.log('Check the app at Port :' + port);
+console.log('Check the app at Port: ' + app.get('port'));
+console.log('Address: ' + app.get('address'));

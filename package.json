@@ -6,23 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "keywords": [
     "google",
     "glass",
     "mongodb",
     "charts"
   ],
-
   "author": "Carlos Rebelato, Camilo Sad, Cristina Bazzano",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4",
-    "mongodb": "^2.1.18"
+    "mongodb": "2.1.18"
   },
-
   "engines": {
     "node": "5.5.0"
   }
-
 }
