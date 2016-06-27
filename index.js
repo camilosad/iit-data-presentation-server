@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var port = 8081;
-var address = '127.0.0.1'
+var address = process.env.MONGODB_URI
 
 app.address = address;
 app.listen(port, address);
