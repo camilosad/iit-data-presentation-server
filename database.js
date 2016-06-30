@@ -7,9 +7,7 @@ module.exports = {
 };
 
 function getConnection(address, callback){
-	var connection = MongoClient.connect(
-		address,
-		function(err, db){
+	var connection = MongoClient.connect(address, function(err, db){
 			if(err){
 				callback(err);
 			}else{
