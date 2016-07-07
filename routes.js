@@ -41,7 +41,7 @@ module.exports = function(app){
 						{
 							$group:
 							{
-								_id : { room: "$room", hour: { $hour: "$datetime" } },
+								_id : { room: "$room", time: { $hour: "$datetime" }, type: "Hour" },
 								avgTemperature : { $avg: "$temperature" },
 								avgPressure: {$avg: "$pressure"},
 								avgHumidity: {$avg: "$humidity"}
@@ -79,7 +79,7 @@ module.exports = function(app){
 						{
 							$group:
 							{
-								_id : { room: "$room", week: { $week: "$datetime" } },
+								_id : { room: "$room", time: { $week: "$datetime" }, type: "Week" },
 								avgTemperature : { $avg: "$temperature" },
 								avgPressure: { $avg: "$pressure" },
 								avgHumidity: { $avg: "$humidity" },
@@ -117,7 +117,7 @@ module.exports = function(app){
 						{
 							$group:
 							{
-								_id : { room: "$room", month: { $month: "$datetime" } },
+								_id : { room: "$room", time: { $month: "$datetime" }, type: "Month" },
 								avgTemperature : { $avg: "$temperature" },
 								avgPressure: { $avg: "$pressure" },
 								avgHumidity: { $avg: "$humidity" },
